@@ -31,6 +31,12 @@ import mcbt2 from "./Images/mcbt2.JPG";
 import mcbt3 from "./Images/mcbt3.JPG";
 import mcbt5 from "./Images/mcbt5.jpg";
 import mcbt6 from "./Images/mcbt6.jpg";
+import thermo1 from "./Images/thermo1.png";
+import thermo2 from "./Images/thermo2.png";
+import thermo3 from "./Images/thermo3.png";
+import thermo4 from "./Images/thermo4.png";
+import thermo5 from "./Images/thermo5.jpeg";
+import thermo6 from "./Images/thermo6.jpeg";
 import gallery1 from "./Images/1.png";
 import gallery2 from "./Images/2.png";
 import resume from "./Images/resume.png";
@@ -447,10 +453,13 @@ function Homepage() {
                 Our journey also included applying problem-solving strategies to{" "}
                 <span className="bold">improve component reliability</span>, as
                 seen in our work on the
-                <span className="bold">mechanism and pneumatic systems</span>.
-                The iterative process led to several improvements that not only
-                enhanced the performance but also ensured the robustness of our
-                design. This continuous iteration helped us achieve{" "}
+                <span className="bold">
+                  {" "}
+                  shooting mechanism and pneumatic systems
+                </span>
+                . The iterative process led to several improvements that not
+                only enhanced the performance but also ensured the robustness of
+                our design. This continuous iteration helped us achieve{" "}
                 <span className="bold">consistency and precision</span>, which
                 were key to winning major awards.
               </p>
@@ -573,6 +582,78 @@ function Homepage() {
             </>
           }
         />
+        {/* TThermo Calculator */}
+        <ProjectCard
+          title="Thermodynamics Property Calculator"
+          content={
+            <>
+              <ImageCarousel
+                images={[thermo1, thermo2, thermo3, thermo4, thermo5, thermo6]}
+              >
+                {" "}
+              </ImageCarousel>
+              <p>
+                I developed the Thermodynamic Properties Calculator as both a
+                MATLAB desktop application and a web app using{" "}
+                <span className="bold">React and Flask</span>, combining my
+                skills in scientific computing and web development to handle
+                complex thermodynamic tabulations.
+              </p>
+              <p>
+                In the MATLAB version, I used{" "}
+                <span className="bold"> MATLAB App Designer</span> to create an
+                intuitive interface, allowing users to calculate properties for
+                substances like water, refrigerants, and ideal gases. I
+                implemented interpolation for property lookups, managed various
+                thermodynamic states, and ensured high-precision calculations.
+                The program’s design is modular, with separate functions for
+                each calculation type and{" "}
+                <span className="bold">robust error handling</span> for
+                reliability.
+              </p>
+              <p>
+                For the web version, I used <span className="bold">React</span>{" "}
+                for the frontend and{" "}
+                <span className="bold">Flask with Pandas</span> for the backend
+                to bring the tool online. The frontend follows{" "}
+                <span className="bold">responsive design principles</span> for a
+                user-friendly experience, while the backend uses Pandas for fast
+                data processing and calculations. This architecture allows for
+                quick property lookups and efficient interpolation. Both
+                versions demonstrate my expertise in software design and UI
+                development. This dual approach showcases my versatility in
+                scientific and web platforms, making complex calculations
+                accessible through easy-to-use applications while maintaining
+                consistent functionality for a broad range of users.
+              </p>
+              <div className="video-container">
+                <iframe
+                  width="560"
+                  height="315"
+                  src="https://www.youtube.com/embed/7WOmO2sJrZM?si=eRfQLeeRXIRYtAKK"
+                  title="YouTube video player"
+                  frameborder="0"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                  referrerpolicy="strict-origin-when-cross-origin"
+                  allowfullscreen
+                ></iframe>
+              </div>
+              <p>
+                Visit the Github Repository Here :{" "}
+                <a
+                  href="https://github.com/ayushkarkare/thermo_calculator"
+                  rel="noopener noreferrer"
+                  target="_blank"
+                  style={{ color: "#ff3d00" }} // Change color here
+                  onClick={(e) => e.stopPropagation()} // Prevent event propagation
+                >
+                  Github Repository
+                </a>
+              </p>
+            </>
+          }
+        />
+
         <div id="gallery" className="gallery-entrance">
           <text className="proj-entrance-text">
             You are now entering ( Gallery ) section{" "}
@@ -602,11 +683,11 @@ function Homepage() {
         <img src={resume} alt="Karkare_Ayush" className="resume_photo" />
         <Card />
         <div id="contact" className="contact-entrance">
-        <text className="proj-entrance-text">
-          You are now entering ( Contact ) section{" "}
-        </text>
-        <text className="resume-counter"> ● 04/04</text>
-      </div>
+          <text className="proj-entrance-text">
+            You are now entering ( Contact ) section{" "}
+          </text>
+          <text className="resume-counter"> ● 04/04</text>
+        </div>
       </div>
       <div className="section-five">
         <section className="contact">
@@ -614,23 +695,22 @@ function Homepage() {
           <div className="projects-header">Contact</div>
         </section>
         <iframe
-      src="https://tally.so/embed/w88kxl?alignLeft=1&hideTitle=1&transparentBackground=1&dynamicHeight=1"
-      width="100%"
-      height="500px"
-      frameBorder="0"
-      marginHeight="0"
-      marginWidth="0"
-      title="Contact Form"
-      style={{ border: "none" }}
-      allow="fullscreen; encrypted-media"
-    ></iframe>
+          src="https://tally.so/embed/w88kxl?alignLeft=1&hideTitle=1&transparentBackground=1&dynamicHeight=1"
+          width="100%"
+          height="500px"
+          frameBorder="0"
+          marginHeight="0"
+          marginWidth="0"
+          title="Contact Form"
+          style={{ border: "none" }}
+          allow="fullscreen; encrypted-media"
+        ></iframe>
 
-    <div className="end-internet">
-      You have reached the end of the internet
-    </div>
+        <div className="end-internet">
+          You have reached the end of the internet
+        </div>
       </div>
-    </div>  
-
+    </div>
   );
 }
 
